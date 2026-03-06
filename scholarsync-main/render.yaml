@@ -1,0 +1,60 @@
+services:
+  - type: web
+    name: scholarsync-web
+    env: node
+    plan: free
+    buildCommand: npm install --legacy-peer-deps --include=dev && cd client && npm install --legacy-peer-deps --include=dev && cd ../server && npm install --legacy-peer-deps --include=dev && cd .. && npm run build
+    startCommand: npm run start
+    healthCheckPath: /api/health
+    autoDeploy: true
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: NPM_CONFIG_PRODUCTION
+        value: "false"
+      - key: CLIENT_URL
+        value: https://your-render-url.onrender.com
+      - key: GROQ_API_KEY
+        sync: false
+      - key: GROQ_MODEL
+        value: llama-3.3-70b-versatile
+      - key: GROQ_TEMPERATURE
+        value: "0.3"
+      - key: GROQ_MAX_TOKENS
+        value: "4096"
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_ANON_KEY
+        sync: false
+      - key: SUPABASE_SERVICE_ROLE_KEY
+        sync: false
+      - key: SUPABASE_STORAGE_BUCKET
+        value: documents
+      - key: VITE_SUPABASE_URL
+        sync: false
+      - key: VITE_SUPABASE_ANON_KEY
+        sync: false
+      - key: HF_API_KEY
+        sync: false
+      - key: HF_TIMEOUT_MS
+        value: "20000"
+      - key: HF_MAX_RETRIES
+        value: "3"
+      - key: POSTHOG_KEY
+        sync: false
+      - key: POSTHOG_HOST
+        value: https://app.posthog.com
+      - key: VITE_POSTHOG_KEY
+        sync: false
+      - key: VITE_POSTHOG_HOST
+        value: https://app.posthog.com
+      - key: RATE_LIMIT_WINDOW_MS
+        value: "60000"
+      - key: RATE_LIMIT_MAX
+        value: "120"
+      - key: MAX_DOCS_PER_USER
+        value: "200"
+      - key: OCR_ENABLED
+        value: "true"
+      - key: OCR_LANG
+        value: eng

@@ -1,0 +1,59 @@
+@import "react-pdf/dist/esm/Page/AnnotationLayer.css";
+@import "react-pdf/dist/esm/Page/TextLayer.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.15) transparent;
+}
+
+*::-webkit-scrollbar { width: 6px; }
+*::-webkit-scrollbar-track { background: transparent; }
+*::-webkit-scrollbar-thumb { background-color: rgba(255, 255, 255, 0.15); border-radius: 20px; }
+
+::selection {
+  background: rgba(139, 92, 246, 0.4);
+  color: white;
+}
+
+body {
+  background: #030014;
+  color: #e2e8f0;
+  font-family: "Inter", system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #a78bfa 0%, #818cf8 25%, #6366f1 50%, #8b5cf6 75%, #a78bfa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.glass-card-hover:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+.chat-markdown h1, .chat-markdown h2, .chat-markdown h3 { @apply font-semibold text-white mt-3 mb-1; }
+.chat-markdown h1 { @apply text-lg; }
+.chat-markdown h2 { @apply text-base; }
+.chat-markdown p { @apply mb-2 leading-relaxed; }
+.chat-markdown ul, .chat-markdown ol { @apply mb-2 pl-5 space-y-1; }
+.chat-markdown ul { @apply list-disc; }
+.chat-markdown ol { @apply list-decimal; }
+.chat-markdown strong { @apply text-white font-semibold; }
+.chat-markdown code { @apply bg-white/10 text-violet-300 px-1.5 py-0.5 rounded text-sm font-mono; }
+.chat-markdown pre { @apply bg-black/40 border border-white/10 rounded-lg p-3 my-2 overflow-x-auto; }
+.chat-markdown pre code { @apply bg-transparent p-0; }
+.chat-markdown blockquote { @apply border-l-2 border-violet-500/50 pl-3 italic text-gray-400 my-2; }

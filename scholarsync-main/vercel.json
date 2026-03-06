@@ -1,0 +1,14 @@
+{
+  "buildCommand": "cd client && npm run build",
+  "outputDirectory": "client/dist",
+  "installCommand": "npm install --legacy-peer-deps && cd client && npm install && cd ../server && npm install --legacy-peer-deps",
+  "framework": "vite",
+  "functions": {
+    "api/upload.ts": { "maxDuration": 60 },
+    "api/chat-stream.ts": { "maxDuration": 60 }
+  },
+  "rewrites": [
+    { "source": "/api/(.*)", "destination": "/api/$1" },
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}

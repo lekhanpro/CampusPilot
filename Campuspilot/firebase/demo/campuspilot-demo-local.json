@@ -1,0 +1,467 @@
+{
+  "meta": {
+    "app": "CampusPilot",
+    "generated_at": "2026-03-11T19:11:28.106Z",
+    "demo_user_id": "11111111-1111-1111-1111-111111111111",
+    "note": "Replace demo_user_id with a real Firebase Auth UID before import. This artifact is generated locally and requires no credentials."
+  },
+  "subjects": [
+    {
+      "id": "subject_algorithms",
+      "user_id": "11111111-1111-1111-1111-111111111111",
+      "name": "Algorithms",
+      "teacher": "Dr. Meera Shah",
+      "color": "#2563eb",
+      "attendance_target": 80,
+      "created_at": "2026-02-18T08:00:00.000Z",
+      "updated_at": "2026-03-09T08:00:00.000Z",
+      "deleted_at": null
+    },
+    {
+      "id": "subject_dbms",
+      "user_id": "11111111-1111-1111-1111-111111111111",
+      "name": "DBMS",
+      "teacher": "Prof. Rohan Menon",
+      "color": "#0f766e",
+      "attendance_target": 75,
+      "created_at": "2026-02-18T08:00:00.000Z",
+      "updated_at": "2026-03-10T08:00:00.000Z",
+      "deleted_at": null
+    },
+    {
+      "id": "subject_os",
+      "user_id": "11111111-1111-1111-1111-111111111111",
+      "name": "Operating Systems",
+      "teacher": "Dr. Kavya Rao",
+      "color": "#db2777",
+      "attendance_target": 75,
+      "created_at": "2026-02-18T08:00:00.000Z",
+      "updated_at": "2026-03-08T08:00:00.000Z",
+      "deleted_at": null
+    }
+  ],
+  "class_sessions": [
+    {
+      "id": "session_1",
+      "user_id": "11111111-1111-1111-1111-111111111111",
+      "subject_id": "subject_algorithms",
+      "day_of_week": 1,
+      "start_time": "09:00",
+      "end_time": "10:00",
+      "room": "Lab 2",
+      "created_at": "2026-02-19T08:00:00.000Z",
+      "updated_at": "2026-03-09T08:00:00.000Z",
+      "deleted_at": null
+    },
+    {
+      "id": "session_2",
+      "user_id": "11111111-1111-1111-1111-111111111111",
+      "subject_id": "subject_dbms",
+      "day_of_week": 1,
+      "start_time": "11:00",
+      "end_time": "12:00",
+      "room": "B-204",
+      "created_at": "2026-02-19T08:00:00.000Z",
+      "updated_at": "2026-03-09T08:00:00.000Z",
+      "deleted_at": null
+    },
+    {
+      "id": "session_3",
+      "user_id": "11111111-1111-1111-1111-111111111111",
+      "subject_id": "subject_os",
+      "day_of_week": 2,
+      "start_time": "10:00",
+      "end_time": "11:00",
+      "room": "A-103",
+      "created_at": "2026-02-19T08:00:00.000Z",
+      "updated_at": "2026-03-09T08:00:00.000Z",
+      "deleted_at": null
+    },
+    {
+      "id": "session_4",
+      "user_id": "11111111-1111-1111-1111-111111111111",
+      "subject_id": "subject_algorithms",
+      "day_of_week": 3,
+      "start_time": "09:00",
+      "end_time": "10:00",
+      "room": "Lab 2",
+      "created_at": "2026-02-19T08:00:00.000Z",
+      "updated_at": "2026-03-09T08:00:00.000Z",
+      "deleted_at": null
+    },
+    {
+      "id": "session_5",
+      "user_id": "11111111-1111-1111-1111-111111111111",
+      "subject_id": "subject_dbms",
+      "day_of_week": 4,
+      "start_time": "13:00",
+      "end_time": "14:00",
+      "room": "B-204",
+      "created_at": "2026-02-19T08:00:00.000Z",
+      "updated_at": "2026-03-09T08:00:00.000Z",
+      "deleted_at": null
+    },
+    {
+      "id": "session_6",
+      "user_id": "11111111-1111-1111-1111-111111111111",
+      "subject_id": "subject_os",
+      "day_of_week": 5,
+      "start_time": "10:00",
+      "end_time": "11:00",
+      "room": "A-103",
+      "created_at": "2026-02-19T08:00:00.000Z",
+      "updated_at": "2026-03-09T08:00:00.000Z",
+      "deleted_at": null
+    }
+  ],
+  "assignments": [
+    {
+      "id": "assignment_algo-sheet",
+      "user_id": "11111111-1111-1111-1111-111111111111",
+      "subject_id": "subject_algorithms",
+      "title": "Greedy Algorithms Problem Set",
+      "description": "Solve and explain 8 scheduling and interval problems.",
+      "due_date": "2026-03-14",
+      "priority": "high",
+      "status": "in_progress",
+      "estimated_minutes": 180,
+      "created_at": "2026-03-06T08:00:00.000Z",
+      "updated_at": "2026-03-10T08:00:00.000Z",
+      "deleted_at": null
+    },
+    {
+      "id": "assignment_dbms-er",
+      "user_id": "11111111-1111-1111-1111-111111111111",
+      "subject_id": "subject_dbms",
+      "title": "ER Diagram Case Study",
+      "description": "Design schema and explain normalization decisions.",
+      "due_date": "2026-03-16",
+      "priority": "medium",
+      "status": "pending",
+      "estimated_minutes": 120,
+      "created_at": "2026-03-07T08:00:00.000Z",
+      "updated_at": "2026-03-10T08:00:00.000Z",
+      "deleted_at": null
+    },
+    {
+      "id": "assignment_os-report",
+      "user_id": "11111111-1111-1111-1111-111111111111",
+      "subject_id": "subject_os",
+      "title": "Process Scheduling Report",
+      "description": "Compare FCFS, SJF, RR and priority scheduling.",
+      "due_date": "2026-03-10",
+      "priority": "high",
+      "status": "overdue",
+      "estimated_minutes": 150,
+      "created_at": "2026-03-05T08:00:00.000Z",
+      "updated_at": "2026-03-11T08:00:00.000Z",
+      "deleted_at": null
+    }
+  ],
+  "attendance_records": [
+    {
+      "id": "attendance_1",
+      "user_id": "11111111-1111-1111-1111-111111111111",
+      "subject_id": "subject_algorithms",
+      "date": "2026-02-27",
+      "status": "attended",
+      "created_at": "2026-02-27T08:00:00.000Z",
+      "updated_at": "2026-02-27T12:15:00.000Z",
+      "deleted_at": null
+    },
+    {
+      "id": "attendance_2",
+      "user_id": "11111111-1111-1111-1111-111111111111",
+      "subject_id": "subject_algorithms",
+      "date": "2026-03-01",
+      "status": "missed",
+      "created_at": "2026-03-01T08:00:00.000Z",
+      "updated_at": "2026-03-01T12:15:00.000Z",
+      "deleted_at": null
+    },
+    {
+      "id": "attendance_3",
+      "user_id": "11111111-1111-1111-1111-111111111111",
+      "subject_id": "subject_algorithms",
+      "date": "2026-03-03",
+      "status": "attended",
+      "created_at": "2026-03-03T08:00:00.000Z",
+      "updated_at": "2026-03-03T12:15:00.000Z",
+      "deleted_at": null
+    },
+    {
+      "id": "attendance_4",
+      "user_id": "11111111-1111-1111-1111-111111111111",
+      "subject_id": "subject_dbms",
+      "date": "2026-03-04",
+      "status": "attended",
+      "created_at": "2026-03-04T08:00:00.000Z",
+      "updated_at": "2026-03-04T12:15:00.000Z",
+      "deleted_at": null
+    },
+    {
+      "id": "attendance_5",
+      "user_id": "11111111-1111-1111-1111-111111111111",
+      "subject_id": "subject_dbms",
+      "date": "2026-03-06",
+      "status": "attended",
+      "created_at": "2026-03-06T08:00:00.000Z",
+      "updated_at": "2026-03-06T12:15:00.000Z",
+      "deleted_at": null
+    },
+    {
+      "id": "attendance_6",
+      "user_id": "11111111-1111-1111-1111-111111111111",
+      "subject_id": "subject_os",
+      "date": "2026-03-07",
+      "status": "missed",
+      "created_at": "2026-03-07T08:00:00.000Z",
+      "updated_at": "2026-03-07T12:15:00.000Z",
+      "deleted_at": null
+    },
+    {
+      "id": "attendance_7",
+      "user_id": "11111111-1111-1111-1111-111111111111",
+      "subject_id": "subject_os",
+      "date": "2026-03-09",
+      "status": "attended",
+      "created_at": "2026-03-09T08:00:00.000Z",
+      "updated_at": "2026-03-09T12:15:00.000Z",
+      "deleted_at": null
+    },
+    {
+      "id": "attendance_8",
+      "user_id": "11111111-1111-1111-1111-111111111111",
+      "subject_id": "subject_algorithms",
+      "date": "2026-03-10",
+      "status": "attended",
+      "created_at": "2026-03-10T08:00:00.000Z",
+      "updated_at": "2026-03-10T12:15:00.000Z",
+      "deleted_at": null
+    }
+  ],
+  "notes": [
+    {
+      "id": "note_algo-revision",
+      "user_id": "11111111-1111-1111-1111-111111111111",
+      "subject_id": "subject_algorithms",
+      "title": "Algorithm revision map",
+      "content": "## Focus\n- Activity selection\n- Huffman coding\n- MST proofs\n\n## Weak area\nExchange arguments.",
+      "tags": [
+        "revision",
+        "midsem"
+      ],
+      "created_at": "2026-03-08T08:00:00.000Z",
+      "updated_at": "2026-03-10T08:00:00.000Z",
+      "deleted_at": null
+    },
+    {
+      "id": "note_dbms-query",
+      "user_id": "11111111-1111-1111-1111-111111111111",
+      "subject_id": "subject_dbms",
+      "title": "DBMS joins cheat sheet",
+      "content": "Natural vs inner joins, indexing impacts, and common optimization patterns.",
+      "tags": [
+        "sql",
+        "quickref"
+      ],
+      "created_at": "2026-03-07T08:00:00.000Z",
+      "updated_at": "2026-03-09T08:00:00.000Z",
+      "deleted_at": null
+    }
+  ],
+  "pomodoro_sessions": [
+    {
+      "id": "pomodoro_1",
+      "user_id": "11111111-1111-1111-1111-111111111111",
+      "subject_id": "subject_algorithms",
+      "assignment_id": "assignment_algo-sheet",
+      "session_type": "work",
+      "duration_minutes": 50,
+      "completed": true,
+      "started_at": "2026-03-08T14:00:00.000Z",
+      "ended_at": "2026-03-08T14:50:00.000Z",
+      "created_at": "2026-03-08T14:00:00.000Z",
+      "updated_at": "2026-03-08T14:50:00.000Z",
+      "deleted_at": null
+    },
+    {
+      "id": "pomodoro_2",
+      "user_id": "11111111-1111-1111-1111-111111111111",
+      "subject_id": "subject_algorithms",
+      "assignment_id": null,
+      "session_type": "short_break",
+      "duration_minutes": 10,
+      "completed": true,
+      "started_at": "2026-03-08T14:00:00.000Z",
+      "ended_at": "2026-03-08T14:10:00.000Z",
+      "created_at": "2026-03-08T14:00:00.000Z",
+      "updated_at": "2026-03-08T14:10:00.000Z",
+      "deleted_at": null
+    },
+    {
+      "id": "pomodoro_3",
+      "user_id": "11111111-1111-1111-1111-111111111111",
+      "subject_id": "subject_dbms",
+      "assignment_id": "assignment_dbms-er",
+      "session_type": "work",
+      "duration_minutes": 45,
+      "completed": true,
+      "started_at": "2026-03-09T14:00:00.000Z",
+      "ended_at": "2026-03-09T14:45:00.000Z",
+      "created_at": "2026-03-09T14:00:00.000Z",
+      "updated_at": "2026-03-09T14:45:00.000Z",
+      "deleted_at": null
+    },
+    {
+      "id": "pomodoro_4",
+      "user_id": "11111111-1111-1111-1111-111111111111",
+      "subject_id": "subject_os",
+      "assignment_id": "assignment_os-report",
+      "session_type": "work",
+      "duration_minutes": 40,
+      "completed": true,
+      "started_at": "2026-03-10T14:00:00.000Z",
+      "ended_at": "2026-03-10T14:40:00.000Z",
+      "created_at": "2026-03-10T14:00:00.000Z",
+      "updated_at": "2026-03-10T14:40:00.000Z",
+      "deleted_at": null
+    },
+    {
+      "id": "pomodoro_5",
+      "user_id": "11111111-1111-1111-1111-111111111111",
+      "subject_id": "subject_algorithms",
+      "assignment_id": "assignment_algo-sheet",
+      "session_type": "work",
+      "duration_minutes": 50,
+      "completed": true,
+      "started_at": "2026-03-11T14:00:00.000Z",
+      "ended_at": "2026-03-11T14:50:00.000Z",
+      "created_at": "2026-03-11T14:00:00.000Z",
+      "updated_at": "2026-03-11T14:50:00.000Z",
+      "deleted_at": null
+    }
+  ],
+  "exams": [
+    {
+      "id": "exam_algo-midsem",
+      "user_id": "11111111-1111-1111-1111-111111111111",
+      "subject_id": "subject_algorithms",
+      "title": "Algorithms Mid-Sem",
+      "exam_date": "2026-03-19",
+      "syllabus": "Greedy, divide and conquer, dynamic programming basics",
+      "prep_status": "Need one more DP practice block and proof revision.",
+      "created_at": "2026-03-04T08:00:00.000Z",
+      "updated_at": "2026-03-10T08:00:00.000Z",
+      "deleted_at": null
+    },
+    {
+      "id": "exam_dbms-quiz",
+      "user_id": "11111111-1111-1111-1111-111111111111",
+      "subject_id": "subject_dbms",
+      "title": "DBMS Quiz 2",
+      "exam_date": "2026-03-15",
+      "syllabus": "Transactions, schedules, normalization",
+      "prep_status": "Ready on transactions; revise normalization examples.",
+      "created_at": "2026-03-06T08:00:00.000Z",
+      "updated_at": "2026-03-10T08:00:00.000Z",
+      "deleted_at": null
+    }
+  ],
+  "user_preferences": [
+    {
+      "id": "pref_default",
+      "user_id": "11111111-1111-1111-1111-111111111111",
+      "attendance_threshold": 75,
+      "pomodoro_work_minutes": 50,
+      "pomodoro_short_break_minutes": 10,
+      "pomodoro_long_break_minutes": 20,
+      "theme": "system",
+      "sync_enabled": true,
+      "study_start_hour": 7,
+      "study_end_hour": 22,
+      "preferred_session_minutes": 50,
+      "focus_intensity": "balanced",
+      "notifications_enabled": false,
+      "created_at": "2026-02-09T08:00:00.000Z",
+      "updated_at": "2026-03-10T08:00:00.000Z",
+      "deleted_at": null
+    }
+  ],
+  "study_plans": [
+    {
+      "id": "plan_week-1",
+      "user_id": "11111111-1111-1111-1111-111111111111",
+      "title": "Recovery plan before quiz week",
+      "input_snapshot_json": {
+        "weakSubjects": [
+          "Algorithms"
+        ],
+        "availableHours": 4,
+        "focus": "Recover overdue OS report while keeping DBMS quiz prep on track"
+      },
+      "output_json": {
+        "summary": "Prioritize overdue OS report tonight, then split the next two sessions between DBMS normalization and algorithm proof revision.",
+        "priorities": [
+          {
+            "title": "Finish OS scheduling draft",
+            "reason": "Already overdue and blocks other work.",
+            "duration_minutes": 90,
+            "subject": "Operating Systems"
+          },
+          {
+            "title": "DBMS normalization revision",
+            "reason": "Quiz is within the next week.",
+            "duration_minutes": 60,
+            "subject": "DBMS"
+          }
+        ],
+        "schedule": [
+          {
+            "start": "18:00",
+            "end": "19:30",
+            "focus": "OS report",
+            "action": "Write comparison section and conclusion"
+          },
+          {
+            "start": "20:00",
+            "end": "21:00",
+            "focus": "DBMS",
+            "action": "Normalize case study examples"
+          }
+        ]
+      },
+      "created_at": "2026-03-10T08:00:00.000Z",
+      "updated_at": "2026-03-10T08:00:00.000Z",
+      "deleted_at": null
+    }
+  ],
+  "sync_queue_items": [
+    {
+      "id": "sync_assignment-overdue",
+      "user_id": "11111111-1111-1111-1111-111111111111",
+      "entity": "assignments",
+      "operation": "upsert",
+      "payload": {
+        "id": "assignment_os-report",
+        "user_id": "11111111-1111-1111-1111-111111111111",
+        "subject_id": "subject_os",
+        "title": "Process Scheduling Report",
+        "description": "Compare FCFS, SJF, RR and priority scheduling.",
+        "due_date": "2026-03-10",
+        "priority": "high",
+        "status": "overdue",
+        "estimated_minutes": 150,
+        "created_at": "2026-03-05T08:00:00.000Z",
+        "updated_at": "2026-03-11T08:00:00.000Z",
+        "deleted_at": null
+      },
+      "queued_at": "2026-03-11T07:45:00.000Z",
+      "attempt_count": 1,
+      "last_error": "Offline during previous sync",
+      "created_at": "2026-03-11T07:45:00.000Z",
+      "updated_at": "2026-03-11T07:55:00.000Z",
+      "deleted_at": null
+    }
+  ]
+}

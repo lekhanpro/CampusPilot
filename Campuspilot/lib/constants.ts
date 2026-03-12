@@ -1,6 +1,7 @@
-﻿export const APP_NAME = "CampusPilot";
-export const APP_DESCRIPTION =
-  "Offline-first academic productivity app for timetable, assignments, attendance, notes, focus sessions, exams, analytics, and AI study planning.";
+export const APP_NAME = "CampusPilot";
+export const GITHUB_DESCRIPTION =
+  "Offline-first student productivity super app (PWA) with timetable, assignments, attendance, notes, Pomodoro, analytics, Firebase sync, and Groq AI planning.";
+export const APP_DESCRIPTION = GITHUB_DESCRIPTION;
 export const LOCAL_USER_STORAGE_KEY = "campuspilot.local-user-id";
 export const TIMER_STORAGE_KEY = "campuspilot.pomodoro";
 export const LAST_SYNC_STORAGE_KEY = "campuspilot.last-sync";

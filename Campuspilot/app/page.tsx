@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { ArrowRight, BarChart3, BrainCircuit, CalendarDays, Clock3, Download, NotebookPen, ShieldCheck } from "lucide-react";
-import { APP_DESCRIPTION, APP_NAME } from "@/lib/constants";
+import { APP_DESCRIPTION, APP_NAME, GITHUB_DESCRIPTION } from "@/lib/constants";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -18,7 +18,7 @@ export default function HomePage() {
         <header className="flex items-center justify-between gap-3 rounded-xl border border-border bg-card px-4 py-3">
           <div>
             <p className="text-lg font-semibold tracking-tight">{APP_NAME}</p>
-            <p className="text-xs text-muted-foreground">Offline-first student productivity workspace</p>
+            <p className="mt-0.5 max-w-2xl text-xs text-muted-foreground">{GITHUB_DESCRIPTION}</p>
           </div>
           <div className="flex gap-2">
             <Link href="/auth/login"><Button variant="ghost">Sign in</Button></Link>

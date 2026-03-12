@@ -7,6 +7,7 @@ dist
 .env
 .env.local
 .env.production
+.env*.local
 coverage
 *.log
 npm-debug.log*
@@ -15,4 +16,3 @@ yarn-error.log*
 pnpm-debug.log*
 package-lock.json
 *.tsbuildinfo
-.vercel

@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useMemo, useState } from "react";
 import { useMutation } from "@tanstack/react-query";
@@ -159,7 +159,7 @@ export default function AiPlannerPage() {
             </CardHeader>
             <CardContent>
               {latestPlan ? (
-                <pre className="overflow-x-auto rounded-2xl bg-slate-950 p-4 text-xs text-slate-100">{latestPlan}</pre>
+                <pre className="overflow-x-auto rounded-xl border border-border bg-muted/40 p-4 text-xs text-foreground">{latestPlan}</pre>
               ) : (
                 <EmptyState title="No generated plan yet" description="Use the actions on the left to request a study plan, daily plan, prioritization, or recovery schedule." />
               )}
@@ -200,3 +200,4 @@ export default function AiPlannerPage() {
     </AppShell>
   );
 }
+

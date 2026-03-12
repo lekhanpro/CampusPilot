@@ -14,11 +14,11 @@ const features = [
 export default function HomePage() {
   return (
     <main className="hero-grid min-h-screen">
-      <div className="mx-auto flex min-h-screen max-w-6xl flex-col px-4 py-8 md:px-8 md:py-12">
-        <header className="flex items-center justify-between gap-3">
+      <div className="mx-auto flex min-h-screen w-full max-w-6xl flex-col px-4 py-7 md:px-8 md:py-10">
+        <header className="flex items-center justify-between gap-3 rounded-xl border border-border bg-card px-4 py-3">
           <div>
-            <p className="font-display text-2xl font-semibold">{APP_NAME}</p>
-            <p className="text-sm text-muted-foreground">Offline-first student super app</p>
+            <p className="text-lg font-semibold tracking-tight">{APP_NAME}</p>
+            <p className="text-xs text-muted-foreground">Offline-first student productivity workspace</p>
           </div>
           <div className="flex gap-2">
             <Link href="/auth/login"><Button variant="ghost">Sign in</Button></Link>
@@ -26,16 +26,16 @@ export default function HomePage() {
           </div>
         </header>
 
-        <section className="grid flex-1 items-center gap-10 py-14 md:grid-cols-[1.1fr_0.9fr] md:py-20">
-          <div className="space-y-6">
-            <span className="inline-flex rounded-full bg-secondary px-3 py-1 text-sm font-medium text-secondary-foreground">
+        <section className="grid flex-1 items-center gap-8 py-10 md:grid-cols-[1.1fr_0.9fr] md:py-14">
+          <div className="space-y-5">
+            <span className="inline-flex rounded-md border border-border bg-muted px-2.5 py-1 text-xs font-medium uppercase tracking-[0.08em] text-muted-foreground">
               Built for real semester pressure
             </span>
-            <div className="space-y-4">
-              <h1 className="max-w-3xl font-display text-5xl font-semibold leading-tight md:text-6xl">
-                Navigate classes, deadlines, attendance, and study time without app hopping.
+            <div className="space-y-3">
+              <h1 className="max-w-3xl text-4xl font-semibold leading-tight md:text-5xl">
+                Plan classes, deadlines, attendance, and study blocks in one calm workspace.
               </h1>
-              <p className="max-w-2xl text-lg text-muted-foreground">{APP_DESCRIPTION}</p>
+              <p className="max-w-2xl text-base text-muted-foreground">{APP_DESCRIPTION}</p>
             </div>
             <div className="flex flex-wrap gap-3">
               <Link href="/dashboard">
@@ -49,71 +49,71 @@ export default function HomePage() {
               </a>
             </div>
             <div className="grid gap-3 sm:grid-cols-3">
-              <Card className="bg-card/80">
-                <CardContent className="space-y-2 p-5">
-                  <Download className="h-5 w-5 text-primary" />
-                  <p className="font-medium">Installable PWA</p>
-                  <p className="text-sm text-muted-foreground">Works offline after first load.</p>
+              <Card className="bg-card">
+                <CardContent className="space-y-2 p-4">
+                  <Download className="h-4 w-4 text-primary" />
+                  <p className="text-sm font-medium">Installable PWA</p>
+                  <p className="text-xs text-muted-foreground">Works offline after first load.</p>
                 </CardContent>
               </Card>
-              <Card className="bg-card/80">
-                <CardContent className="space-y-2 p-5">
-                  <Clock3 className="h-5 w-5 text-primary" />
-                  <p className="font-medium">Focus-aware planner</p>
-                  <p className="text-sm text-muted-foreground">Pomodoro sessions tied to subjects and tasks.</p>
+              <Card className="bg-card">
+                <CardContent className="space-y-2 p-4">
+                  <Clock3 className="h-4 w-4 text-primary" />
+                  <p className="text-sm font-medium">Focus-aware planner</p>
+                  <p className="text-xs text-muted-foreground">Pomodoro sessions tied to subjects and tasks.</p>
                 </CardContent>
               </Card>
-              <Card className="bg-card/80">
-                <CardContent className="space-y-2 p-5">
-                  <ShieldCheck className="h-5 w-5 text-primary" />
-                  <p className="font-medium">Private by design</p>
-                  <p className="text-sm text-muted-foreground">Guest mode first, Firebase sync when you opt in.</p>
+              <Card className="bg-card">
+                <CardContent className="space-y-2 p-4">
+                  <ShieldCheck className="h-4 w-4 text-primary" />
+                  <p className="text-sm font-medium">Private by design</p>
+                  <p className="text-xs text-muted-foreground">Guest mode first, Firebase sync when you opt in.</p>
                 </CardContent>
               </Card>
             </div>
           </div>
 
-          <Card className="overflow-hidden border-none bg-slate-950 text-white">
-            <CardContent className="space-y-5 p-6 md:p-8">
+          <Card className="bg-card">
+            <CardContent className="space-y-4 p-5 md:p-6">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-sm text-slate-400">Today</p>
-                  <p className="font-display text-3xl">Your semester cockpit</p>
+                  <p className="text-xs uppercase tracking-[0.08em] text-muted-foreground">Today</p>
+                  <p className="mt-1 text-xl font-semibold">Semester snapshot</p>
                 </div>
-                <span className="rounded-full bg-emerald-500/20 px-3 py-1 text-xs font-medium text-emerald-300">Synced</span>
+                <span className="rounded-md border border-success/30 bg-success/15 px-2 py-1 text-xs font-medium text-success">Synced</span>
               </div>
-              <div className="grid gap-3 sm:grid-cols-2">
+              <div className="grid gap-2">
                 {[
                   ["Classes", "3 scheduled"],
                   ["Assignments", "2 due soon"],
                   ["Attendance", "81% on track"],
                   ["Focus", "120 min today"]
                 ].map(([label, value]) => (
-                  <div key={label} className="rounded-2xl border border-white/10 bg-white/5 p-4">
-                    <p className="text-sm text-slate-400">{label}</p>
-                    <p className="mt-2 text-lg font-medium">{value}</p>
+                  <div key={label} className="rounded-md border border-border bg-background px-3 py-2.5">
+                    <p className="text-xs text-muted-foreground">{label}</p>
+                    <p className="mt-1 text-sm font-medium">{value}</p>
                   </div>
                 ))}
               </div>
-              <div className="rounded-2xl bg-gradient-to-r from-blue-500/20 via-cyan-500/10 to-emerald-500/20 p-4">
-                <p className="text-sm text-slate-300">AI planner sample</p>
-                <p className="mt-2 text-lg font-medium">6:00 PM - 7:30 PM: Revise Operating Systems + finish DBMS assignment draft.</p>
+              <div className="rounded-md border border-border bg-muted/35 px-3 py-3">
+                <p className="text-xs uppercase tracking-[0.08em] text-muted-foreground">AI planner sample</p>
+                <p className="mt-2 text-sm">6:00 PM - 7:30 PM: Revise Operating Systems and finish DBMS assignment draft.</p>
               </div>
             </CardContent>
           </Card>
         </section>
 
-        <section id="features" className="grid gap-4 pb-12 md:grid-cols-2 xl:grid-cols-4">
+        <section id="features" className="grid gap-3 pb-8 md:grid-cols-2 xl:grid-cols-4">
           {features.map((feature) => {
             const Icon = feature.icon;
             return (
               <Card key={feature.title}>
-                <CardContent className="space-y-4 p-6">
-                  <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-primary/12 text-primary">
-                    <Icon className="h-5 w-5" />
+                <CardContent className="space-y-3 p-5">
+                  <div className="flex h-9 w-9 items-center justify-center rounded-md border border-border bg-muted/40 text-primary">
+                    <Icon className="h-4 w-4" />
                   </div>
-                  <div className="space-y-2">
-                    <h2 className="font-medium">{feature.title}</h2>
+                  <div className="space-y-1.5">
+                    <h2 className="text-sm font-semibold">{feature.title}</h2>
                     <p className="text-sm text-muted-foreground">{feature.description}</p>
                   </div>
                 </CardContent>

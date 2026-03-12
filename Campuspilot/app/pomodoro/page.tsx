@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useEffect, useMemo, useRef } from "react";
 import { Pause, Play, RotateCcw } from "lucide-react";
@@ -76,10 +76,10 @@ export default function PomodoroPage() {
               </div>
             </CardHeader>
             <CardContent className="space-y-6">
-              <div className="rounded-[2rem] bg-slate-950 p-8 text-center text-white">
-                <p className="text-sm uppercase tracking-[0.3em] text-slate-400">{mode.replace("_", " ")}</p>
-                <p className="mt-4 font-display text-7xl font-semibold">{formatSeconds(remainingSeconds)}</p>
-                <p className="mt-3 text-sm text-slate-400">{durationMinutes} minute session</p>
+              <div className="rounded-xl border border-border bg-muted/35 p-8 text-center">
+                <p className="text-xs uppercase tracking-[0.12em] text-muted-foreground">{mode.replace("_", " ")}</p>
+                <p className="mt-4 font-display text-6xl font-semibold md:text-7xl">{formatSeconds(remainingSeconds)}</p>
+                <p className="mt-3 text-sm text-muted-foreground">{durationMinutes} minute session</p>
                 <div className="mt-6 flex justify-center gap-3">
                   {running ? (
                     <Button variant="secondary" size="lg" onClick={pause} className="gap-2"><Pause className="h-4 w-4" />Pause</Button>
@@ -178,3 +178,4 @@ export default function PomodoroPage() {
     </AppShell>
   );
 }
+

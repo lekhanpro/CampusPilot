@@ -1,81 +1,105 @@
-﻿@tailwind base;
+@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --font-sans: "Sora";
-  --font-display: "Fraunces";
-  --background: 45 33% 98%;
-  --foreground: 222 47% 11%;
+  --font-sans: "Inter";
+  --font-mono: "JetBrains Mono";
+  --font-display: var(--font-sans);
+  --background: 40 23% 97%;
+  --foreground: 220 11% 16%;
   --card: 0 0% 100%;
-  --card-foreground: 222 47% 11%;
-  --primary: 220 91% 56%;
+  --card-foreground: 220 11% 16%;
+  --primary: 222 14% 19%;
   --primary-foreground: 0 0% 100%;
-  --secondary: 154 46% 94%;
-  --secondary-foreground: 167 66% 20%;
-  --accent: 38 92% 92%;
-  --accent-foreground: 23 92% 27%;
-  --muted: 215 25% 92%;
-  --muted-foreground: 217 19% 35%;
-  --border: 216 20% 86%;
-  --input: 216 20% 88%;
-  --ring: 220 91% 56%;
-  --destructive: 0 84% 60%;
+  --secondary: 36 18% 93%;
+  --secondary-foreground: 220 11% 18%;
+  --accent: 30 24% 91%;
+  --accent-foreground: 220 11% 18%;
+  --muted: 35 16% 92%;
+  --muted-foreground: 220 8% 42%;
+  --border: 32 13% 84%;
+  --input: 32 13% 84%;
+  --ring: 220 9% 45%;
+  --destructive: 0 69% 45%;
   --destructive-foreground: 0 0% 100%;
-  --success: 160 84% 30%;
+  --success: 146 43% 35%;
   --success-foreground: 0 0% 100%;
-  --warning: 38 92% 50%;
-  --warning-foreground: 30 50% 10%;
+  --warning: 35 88% 48%;
+  --warning-foreground: 26 57% 13%;
 }
 
 .dark {
-  --background: 216 33% 10%;
-  --foreground: 210 40% 96%;
-  --card: 222 47% 13%;
-  --card-foreground: 210 40% 96%;
-  --primary: 214 95% 68%;
-  --primary-foreground: 222 47% 11%;
-  --secondary: 162 45% 16%;
-  --secondary-foreground: 158 64% 84%;
-  --accent: 31 55% 16%;
-  --accent-foreground: 38 92% 84%;
-  --muted: 217 19% 18%;
-  --muted-foreground: 215 20% 70%;
-  --border: 217 19% 22%;
-  --input: 217 19% 22%;
-  --ring: 214 95% 68%;
-  --destructive: 0 72% 51%;
+  --background: 220 10% 10%;
+  --foreground: 36 20% 94%;
+  --card: 220 9% 13%;
+  --card-foreground: 36 20% 94%;
+  --primary: 36 20% 94%;
+  --primary-foreground: 220 12% 14%;
+  --secondary: 220 8% 17%;
+  --secondary-foreground: 36 20% 94%;
+  --accent: 220 8% 19%;
+  --accent-foreground: 36 20% 94%;
+  --muted: 220 8% 17%;
+  --muted-foreground: 35 12% 70%;
+  --border: 220 8% 24%;
+  --input: 220 8% 24%;
+  --ring: 36 18% 78%;
+  --destructive: 0 63% 50%;
   --destructive-foreground: 0 0% 100%;
-  --success: 160 84% 34%;
+  --success: 146 44% 44%;
   --success-foreground: 0 0% 100%;
-  --warning: 38 92% 50%;
-  --warning-foreground: 30 50% 10%;
+  --warning: 35 88% 52%;
+  --warning-foreground: 26 57% 13%;
 }
 
 html {
   scroll-behavior: smooth;
 }
 
-body {
-  min-height: 100vh;
-  background:
-    radial-gradient(circle at top left, rgba(59, 130, 246, 0.09), transparent 34%),
-    radial-gradient(circle at bottom right, rgba(16, 185, 129, 0.09), transparent 30%),
-    hsl(var(--background));
-  color: hsl(var(--foreground));
-  font-family: var(--font-sans), ui-sans-serif, system-ui;
-}
+@layer base {
+  * {
+    border-color: hsl(var(--border));
+  }
 
-* {
-  border-color: hsl(var(--border));
+  body {
+    min-height: 100vh;
+    background: linear-gradient(180deg, hsl(var(--background)), hsl(var(--background)));
+    color: hsl(var(--foreground));
+    font-family: var(--font-sans), ui-sans-serif, system-ui;
+    letter-spacing: -0.011em;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    letter-spacing: -0.02em;
+  }
+
+  code,
+  pre,
+  kbd,
+  samp {
+    font-family: var(--font-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
+  }
+
+  ::selection {
+    background: hsl(var(--primary) / 0.16);
+  }
 }
 
 .hero-grid {
-  background-image: radial-gradient(circle at 1px 1px, rgba(148, 163, 184, 0.22) 1px, transparent 0);
-  background-size: 24px 24px;
+  background-image: radial-gradient(circle at 1px 1px, hsl(var(--border) / 0.32) 1px, transparent 0);
+  background-size: 28px 28px;
 }
 
 input[type="time"]::-webkit-calendar-picker-indicator,
 input[type="date"]::-webkit-calendar-picker-indicator {
   filter: invert(0.35);
+}
+
+.dark input[type="time"]::-webkit-calendar-picker-indicator,
+.dark input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(0.78);
 }

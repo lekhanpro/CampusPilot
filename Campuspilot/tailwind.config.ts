@@ -1,4 +1,4 @@
-﻿import type { Config } from "tailwindcss";
+import type { Config } from "tailwindcss";
 
 const config: Config = {
   darkMode: ["class"],
@@ -51,15 +51,16 @@ const config: Config = {
         }
       },
       borderRadius: {
-        xl: "1.25rem",
-        "2xl": "1.75rem"
+        xl: "0.75rem",
+        "2xl": "1rem"
       },
       fontFamily: {
         sans: ["var(--font-sans)", "ui-sans-serif", "system-ui"],
-        display: ["var(--font-display)", "ui-serif", "Georgia"]
+        display: ["var(--font-sans)", "ui-sans-serif", "system-ui"],
+        mono: ["var(--font-mono)", "ui-monospace", "SFMono-Regular", "Menlo", "monospace"]
       },
       boxShadow: {
-        soft: "0 18px 50px -22px rgba(15, 23, 42, 0.35)"
+        soft: "0 1px 2px rgba(15, 23, 42, 0.06), 0 8px 24px -20px rgba(15, 23, 42, 0.28)"
       }
     }
   },

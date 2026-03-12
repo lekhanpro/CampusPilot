@@ -14,7 +14,7 @@ export function Field({
 }) {
   return (
     <label className={cn("grid gap-2 text-sm", className)}>
-      <span className="font-medium text-foreground">{label}</span>
+      <span className="text-xs font-medium uppercase tracking-[0.08em] text-muted-foreground">{label}</span>
       {children}
       {hint ? <span className="text-xs text-muted-foreground">{hint}</span> : null}
     </label>

@@ -1,4 +1,4 @@
-﻿import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardTitle } from "@/components/ui/card";
 
 export function EmptyState({
@@ -13,7 +13,7 @@ export function EmptyState({
   onAction?: () => void;
 }) {
   return (
-    <Card className="border-dashed">
+    <Card className="border-dashed bg-muted/35">
       <CardContent className="flex flex-col items-start gap-3 p-6">
         <CardTitle>{title}</CardTitle>
         <CardDescription>{description}</CardDescription>

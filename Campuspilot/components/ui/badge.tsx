@@ -13,12 +13,12 @@ export function Badge({
   return (
     <span
       className={cn(
-        "inline-flex items-center rounded-md border px-2 py-1 text-xs font-medium",
-        tone === "default" && "border-primary/20 bg-primary/10 text-primary",
-        tone === "success" && "border-success/25 bg-success/15 text-success",
-        tone === "warning" && "border-warning/25 bg-warning/20 text-yellow-900 dark:text-yellow-100",
-        tone === "danger" && "border-destructive/25 bg-destructive/15 text-destructive",
-        tone === "secondary" && "border-border bg-muted text-muted-foreground",
+        "inline-flex items-center rounded-md border px-2 py-1 text-xs font-medium backdrop-blur-md",
+        tone === "default" && "border-primary/25 bg-primary/14 text-primary",
+        tone === "success" && "border-success/28 bg-success/18 text-success",
+        tone === "warning" && "border-warning/30 bg-warning/20 text-yellow-900 dark:text-yellow-100",
+        tone === "danger" && "border-destructive/28 bg-destructive/16 text-destructive",
+        tone === "secondary" && "border-border/70 bg-card/60 text-muted-foreground",
         className
       )}
     >

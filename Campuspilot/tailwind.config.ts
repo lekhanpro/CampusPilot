@@ -51,8 +51,8 @@ const config: Config = {
         }
       },
       borderRadius: {
-        xl: "0.75rem",
-        "2xl": "1rem"
+        xl: "0.875rem",
+        "2xl": "1.1rem"
       },
       fontFamily: {
         sans: ["var(--font-sans)", "ui-sans-serif", "system-ui"],
@@ -60,7 +60,7 @@ const config: Config = {
         mono: ["var(--font-mono)", "ui-monospace", "SFMono-Regular", "Menlo", "monospace"]
       },
       boxShadow: {
-        soft: "0 1px 2px rgba(15, 23, 42, 0.06), 0 8px 24px -20px rgba(15, 23, 42, 0.28)"
+        soft: "0 1px 0 rgba(255,255,255,0.42) inset, 0 18px 42px -28px rgba(15, 23, 42, 0.48), 0 6px 16px -12px rgba(15, 23, 42, 0.4)"
       }
     }
   },

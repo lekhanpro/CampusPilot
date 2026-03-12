@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Field } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
+import { getFirebaseAuthErrorMessage } from "@/lib/firebase-auth-errors";
 import { getFirebaseClientAuth } from "@/services/firebase-client";
 
 const auth = getFirebaseClientAuth();
@@ -35,7 +36,7 @@ export default function SignupPage() {
       setMessage("Account created successfully.");
       router.push("/dashboard");
     } catch (authError) {
-      setError(authError instanceof Error ? authError.message : "Sign-up failed.");
+      setError(getFirebaseAuthErrorMessage(authError, "Sign-up failed."));
     } finally {
       setLoading(false);
     }

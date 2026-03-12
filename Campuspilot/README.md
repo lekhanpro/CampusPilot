@@ -9,7 +9,10 @@
 
 CampusPilot is a production-ready, offline-first student productivity web app/PWA. It combines timetable, calendar, assignments, attendance, notes, Pomodoro, exams, analytics, and Groq-powered AI planning in one polished workspace.
 
+> GitHub description: **Offline-first student productivity super app (PWA) with timetable, assignments, attendance, notes, Pomodoro, analytics, Firebase sync, and Groq AI planning.**
+
 - Live app: [campuspilot-weld.vercel.app](https://campuspilot-weld.vercel.app)
+- GitHub Pages: [lekhanpro.github.io/CampusPilot](https://lekhanpro.github.io/CampusPilot/)
 - Tech stack: Next.js App Router, TypeScript, Tailwind, Dexie, Firebase, Groq, Zustand, React Query, Recharts, Zod
 
 ## Product Overview
@@ -133,6 +136,16 @@ Files used:
 - `firebase/firestore.rules`
 - `firebase/firestore.indexes.json`
 
+## GitHub Pages
+
+A project site is provided from `docs/` and deployed via `.github/workflows/pages.yml`.
+
+Expected URL:
+- `https://lekhanpro.github.io/CampusPilot/`
+
+If this is your first Pages deploy, open repository settings and set:
+- **Settings > Pages > Build and deployment > Source = GitHub Actions**
+
 ## Deployment (Vercel)
 
 1. Push to GitHub.
@@ -175,3 +188,12 @@ A GitHub Actions CI workflow runs these checks on pushes/PRs.
 ## License
 
 Licensed under the [MIT License](./LICENSE).
+
+
+
+
+
+
+
+
+

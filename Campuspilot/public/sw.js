@@ -1,4 +1,4 @@
-﻿const CACHE_NAME = "campuspilot-v1";
+const CACHE_NAME = "campuspilot-v2";
 const CORE_ASSETS = ["/", "/dashboard", "/manifest.webmanifest", "/icons/icon-192.svg", "/icons/icon-512.svg"];
 
 self.addEventListener("install", (event) => {
@@ -13,11 +13,20 @@ self.addEventListener("activate", (event) => {
   self.clients.claim();
 });
 
+function shouldUseNetworkFirst(request) {
+  const url = new URL(request.url);
+  if (request.mode === "navigate") return true;
+  if (url.origin !== self.location.origin) return false;
+  if (url.pathname.startsWith("/_next/")) return true;
+  if (request.destination === "script" || request.destination === "style") return true;
+  return false;
+}
+
 self.addEventListener("fetch", (event) => {
   const { request } = event;
   if (request.method !== "GET") return;
 
-  if (request.mode === "navigate") {
+  if (shouldUseNetworkFirst(request)) {
     event.respondWith(
       fetch(request)
         .then((response) => {
@@ -25,7 +34,10 @@ self.addEventListener("fetch", (event) => {
           caches.open(CACHE_NAME).then((cache) => cache.put(request, copy));
           return response;
         })
-        .catch(async () => (await caches.match(request)) || caches.match("/dashboard"))
+        .catch(async () => {
+          const cached = await caches.match(request);
+          return cached || (request.mode === "navigate" ? caches.match("/dashboard") : Response.error());
+        })
     );
     return;
   }

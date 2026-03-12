@@ -250,7 +250,7 @@ export default function DashboardPage() {
                 {quickLaunch.map((item) => {
                   const Icon = item.icon;
                   return (
-                    <Link key={item.href} href={item.href} className="glass-subtle group rounded-xl p-3.5 transition hover:-translate-y-0.5">
+                    <Link key={item.href} href={item.href} className="glass-subtle group rounded-xl p-3.5 transition-colors hover:bg-card/72">
                       <div className="flex items-center gap-2 text-sm font-medium">
                         <Icon className="h-4 w-4 text-primary" />
                         {item.label}
@@ -268,3 +268,4 @@ export default function DashboardPage() {
     </AppShell>
   );
 }
+

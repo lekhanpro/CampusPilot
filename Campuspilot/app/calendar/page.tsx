@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useMemo, useState } from "react";
 import { addMonths, format, isSameMonth, subMonths } from "date-fns";
@@ -58,7 +58,7 @@ export default function CalendarPage() {
                       key={key}
                       type="button"
                       onClick={() => setSelectedDate(key)}
-                      className={`min-h-24 rounded-2xl border p-2 text-left transition ${active ? "border-primary bg-primary/10" : "border-border/70 bg-card hover:bg-muted/50"} ${isSameMonth(day, month) ? "opacity-100" : "opacity-40"}`}
+                      className={`min-h-24 rounded-2xl border p-2 text-left transition ${active ? "border-primary bg-primary/15 shadow-soft" : "border-border/70 bg-background/55 hover:bg-muted/65"} ${isSameMonth(day, month) ? "opacity-100" : "opacity-40"}`}
                     >
                       <div className="flex items-center justify-between text-sm font-medium">
                         <span>{format(day, "d")}</span>
@@ -105,3 +105,4 @@ export default function CalendarPage() {
     </AppShell>
   );
 }
+

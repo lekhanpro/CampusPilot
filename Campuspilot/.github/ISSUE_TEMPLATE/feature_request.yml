@@ -1,0 +1,28 @@
+name: Feature Request
+description: Suggest a new capability or enhancement
+labels: ["enhancement", "needs-triage"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem Statement
+      placeholder: What pain point are you trying to solve?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed Solution
+      placeholder: What should be added or changed?
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives Considered
+      placeholder: Any alternative approaches?
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional Context
+      placeholder: Links, screenshots, or references
